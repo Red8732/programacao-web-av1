@@ -28,18 +28,13 @@ public class CadastrarController extends HttpServlet {
 		String horaInicial = req.getParameter("horaInicial");
 		String horaFinal = req.getParameter("horaFinal");
 		
-		List<Curso> cursos = (List<Curso>) req.getSession().getAttribute("cursos");
-		List<Periodo> periodos = (List<Periodo>) req.getSession().getAttribute("periodos");
-		
 		Curso curso = new Curso(disciplina);
 		Periodo periodo = new Periodo(dia, horaInicial, horaFinal);
 		
-		cursos.add(curso);
-		periodos.add(periodo);
-		
-		if(nome != null) {
-			Coordenador coordenador = new Coordenador(nome, cursos, periodos);
+		if(nome != null && curso != null && periodo != null) {
+			Coordenador coordenador = new Coordenador(nome, curso, periodo);
 			coordenadores.add(coordenador);
+			req.setAttribute("coordenador", coordenadores);
 		}
 		
 		RequestDispatcher rd = req.getRequestDispatcher("lista.jsp");

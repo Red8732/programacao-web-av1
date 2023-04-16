@@ -6,14 +6,13 @@ import java.util.List;
 public class Coordenador {
 	
 	private String nome;
-	private List<Curso> cursos = new ArrayList<>();
-	private List<Periodo> periodos = new ArrayList<>();
+	Curso curso;
+	Periodo periodo;
 	
-	
-	public Coordenador(String nome, List<Curso> cursos, List<Periodo> periodos) {
+	public Coordenador(String nome, Curso curso, Periodo periodo) {
 		this.nome = nome;
-		this.cursos = cursos;
-		this.periodos = periodos;
+		this.curso = curso;
+		this.periodo = periodo;
 	}
 	
 	public String getNome() {
@@ -24,20 +23,20 @@ public class Coordenador {
 		this.nome = nome;
 	}
 	
-	public List<Curso> getCursos() {
-		return cursos;
+	public Curso getCurso() {
+		return curso;
 	}
-	
-	public void setCursos(List<Curso> cursos) {
-		this.cursos = cursos;
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
-	
-	public List<Periodo> getPeriodos() {
-		return periodos;
+
+	public Periodo getPeriodo() {
+		return periodo;
 	}
-	
-	public void setPeriodos(List<Periodo> periodos) {
-		this.periodos = periodos;
+
+	public void setPeriodo(Periodo periodo) {
+		this.periodo = periodo;
 	}
 	
 }

@@ -24,16 +24,8 @@
 		<c:forEach var="c" items="${coordenador}">
 			<tr>
 				<td>${c.nome}</td>
-				<td>
-					<c:forEach var="curso" items="${c.cursos}">
-						${curso.disciplina}<br>
-					</c:forEach>
-				</td>
-				<td>
-					<c:forEach var="periodo" items="${c.periodos}">
-						${periodo.dia} - ${periodo.horaInicial} às ${periodo.horaFinal}<br>
-					</c:forEach>
-				</td>
+				<td>${c.curso.disciplina}<br></td>
+				<td>${c.periodo.dia} - ${c.periodo.horarioInicial} às ${c.periodo.horarioFinal}<br></td>
 			</tr>
 		</c:forEach>	
 			</table>
