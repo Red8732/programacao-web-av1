@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coordenadores</title>
 
+
 <jsp:useBean id="coordenador" scope="session" class="java.util.ArrayList"></jsp:useBean>
 </head>
 	<body>
@@ -21,7 +22,7 @@
 				</tr>
 				
 				<!-- Montando linhas da tabela: -->	
-		<c:forEach var="c" items="${coordenador}">
+		<c:forEach var="c" items="${coordenadores}">
 			<tr>
 				<td>${c.nome}</td>
 				<td>${c.curso.disciplina}<br></td>

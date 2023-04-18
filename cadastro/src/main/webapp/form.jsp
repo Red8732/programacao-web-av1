@@ -10,7 +10,7 @@
 	<h1>Adicionar Coordenador</h1>
 	<hr />
 		<div class="form"> 
-			<form action="lista" method="POST">
+			<form action="cadastrar" method="POST">
 			Nome: <input type="text" name="nome" required/><br />
 			Curso: <input type="text" name="curso" required/><br />
 			
