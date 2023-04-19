@@ -20,12 +20,16 @@ public class ExcluirController extends HttpServlet {
 			HttpServletResponse resp) throws ServletException, IOException {
 		List<Coordenador> coordenadores = (List<Coordenador>) req.getSession().getAttribute("coordenadores");
 		String nome = req.getParameter("nome");
+		String id = req.getParameter("id");
+		
 		int indice = -1;
+
 		for (int i = 0; i < coordenadores.size(); i++) {
-			if(coordenadores.get(i).getNome().equals(nome)){
+			if(coordenadores.get(i).getId() == Integer.parseInt(id)){
 				indice = i;
 			}
 		}
+		
 		if(indice != -1) coordenadores.remove(indice);
 		resp.sendRedirect("/cadastro/");
 	}

@@ -5,12 +5,15 @@ import java.util.ArrayList;
 public class Coordenador {
 	
 	private String nome;
-	private int id;
-	Curso curso;
-	Periodo periodo;
+	private int id=0;
+	private Curso curso;
+	private Periodo periodo;
+	
+	private static int geradorId = 0;
 	
 	public Coordenador(String nome, Curso curso, Periodo periodo) {
-		id += 1;
+		geradorId++;
+		this.id = geradorId;
 		this.nome = nome;
 		this.curso = curso;
 		this.periodo = periodo;
