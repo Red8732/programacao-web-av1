@@ -3,24 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Cadastrar</title>
+<link rel="stylesheet" href="css/form.css">
 
 <jsp:useBean id="coordenadores" scope="session" class="java.util.ArrayList"></jsp:useBean>
 </head>
-	<body>
+<body>
 	<h1>Adicionar Coordenador</h1>
-	<hr />
-		<div class="form"> 
-			<form action="lista" method="POST">
-			Nome: <input type="text" name="nome" required/><br />
-			Curso: <input type="text" name="curso" required/><br />
+	
+	<div class="form"> 
+		<form action="cadastrar" method="POST">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" required/>
 			
-			<p> Período de Disponibilidade: </p>
-			Dia: <input type="text" name="dia" required/><br />
-			Horário Inicial: <input type="text" name="horaInicial" required/><br />
-			Horário Final: <input type="text" name="horaFinal" required/><br />
-		</div>
-
-		 <input type="submit" value="Gravar" />
+			<label for="curso">Curso:</label>
+			<input type="text" id="curso" name="curso" required/>
+			
+			<p>Período de Disponibilidade:</p>
+			
+			<label for="dia">Dia:</label>
+			<input type="text" id="dia" name="dia" required/>
+			
+			<label for="horaInicial">Horário Inicial:</label>
+			<input type="text" id="horaInicial" name="horaInicial" required/>
+			
+			<label for="horaFinal">Horário Final:</label>
+			<input type="text" id="horaFinal" name="horaFinal" required/>
+			
+			<input type="submit" value="Adicionar" />
 		</form>
-	</body>
+	</div>
+</body>
 </html>
