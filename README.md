@@ -18,12 +18,14 @@ O projeto contém três JSPs, três classes 'Controller' e três classes modelo 
 
 # Funcionalidades:
 
-  • JSP:
+• JSP:
+
 - "form.jsp" = responsável por salvar os dados do formulário e enviá-los para a classe "CadastrarController.java" via método POST.
 - "lista.jsp" = mostra os dados reccebidos pelo "CadastrarController.java", possibilitando também o administrador atualizar ou excluir dados.
 - "atualizar.jsp" = recebe os dados através do "AtualizarController.java" e preenche as caixas de texto no formulário para o administrador atualizá-los.
 
-  • Java:
+• Java:
+
 - "Coordenador.java" = classe Coordenador, com seus respectivos atributos "String nome", "int id", "Curso curso" e "Periodo periodo".
 - "Curso.java" = classe Curso que possui o atributo "String disciplina".
 - "Periodo.java" = classe Periodo que possui os atributos "String dia, "String horarioInicial" e "String horarioFinal;"
